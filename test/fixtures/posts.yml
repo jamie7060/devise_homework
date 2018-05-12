@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  제목: MyString
+  내용: 
+
+two:
+  제목: MyString
+  내용: 

@@ -1,0 +1,19 @@
+<div id="carouselExampleSlidesOnly" class="carousel slide bg-secondary" data-ride="carousel">
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <%= image_tag("pic1.jpeg", :class => "rounded d-flex", :alt => "First slide",  style: "height: 480px; width: 100%;")%>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag("pic2.jpeg", :class => "rounded d-flex", :alt => "Second slide", style: "height: 480px; width: 100%;")%>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag("pic3.jpeg", :class => "rounded d-flex", :alt => "Third slide", style: "height: 480px; width: 100%;")%>
+    </div>
+  </div>
+</div>
+<div class="container-fluid p-3 mb-2 text-white d-flex p-2 bg-secondary" >
+    <h1>멋쟁이 사자처럼입니다.</h1>
+    <button type="button" class="btn btn-secondary btn-lg">
+    <%= link_to '위대한 여정 함께하기' , posts_path, style: 'color:#FFFFFF;'%>
+    </button>
+</div>

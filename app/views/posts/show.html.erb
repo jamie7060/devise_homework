@@ -1,0 +1,27 @@
+<div class="about">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>제목:</strong>
+  <%= @post.제목 %>
+</p>
+
+<p>
+  <strong>내용:</strong>
+  <%= @post.내용 %>
+</p>
+
+<%= link_to '수정', edit_post_path(@post), style: 'color:#FFFFFF;' %> |
+<%= link_to '뒤로', posts_path, style: 'color:#FFFFFF;'%>
+
+<%=form_for Comment.new, url:post_comments_path(@post.id) do |f|%>
+  <%=f.label "댓글"%>
+  <%=f.text_field :content%> <br>
+  <%=f.submit '작성'%>
+<% end%>
+
+<% @post.comments.each do |comment|%>
+  <%=comment.content %>
+  <%=link_to '[이 댓글 파괴]', post_comment_path(@post.id, comment.id), method: 'delete', style: "color:white" %><br>
+<% end%>
+</div>
